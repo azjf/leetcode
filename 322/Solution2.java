@@ -4,9 +4,7 @@ class Solution {
 		if (amount == 0) return 0;
 
 		int[] dp = new int[amount];
-		for (int i = 0; i < dp.length; i++) {
-			dp[i] = (int) amount + 1;
-		}
+		for (int i = 0; i < dp.length; i++) dp[i] = amount + 1;
 
 		for (int i = 0; i < dp.length; i++) {
 			for (int c : coins) {
