@@ -1,15 +1,13 @@
 class Solution {
 	public int uniquePaths(int m, int n) {
-		m -= 1;
-		n -= 1;
-		int min = m < n ? m : n;
-		long ans = 1;
-		for (int i = m + n; i > m + n - min; i--) ans *= i;
-		for (int i = min; i >= 1; i--) ans /= i;
-		return (int) ans;
-	}
-
-	public static void main(String[] args) {
-		System.out.println((new Solution()).uniquePaths(10, 10));
+		int[] dp = new int[n];
+		dp[0] = 1;
+		for (int i = 0; i < m; i++) {
+			// dp[i][j] = dp[i][j - 1] + dp[i - 1][j]
+			for (int j = 1; j < n; j++) {
+				dp[j] += dp[j - 1];
+			}
+		}
+		return dp[dp.length - 1];
 	}
 }
