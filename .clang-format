@@ -1,0 +1,24 @@
+BasedOnStyle: Google
+
+IndentWidth: 4
+AccessModifierOffset: -4
+IndentCaseLabels: false
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: true
+  AfterStruct: true
+  AfterFunction: true
+  AfterNamespace: true
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+
+MaxEmptyLinesToKeep: 2
+KeepEmptyLinesAtTheStartOfBlocks: true
+
+SpaceAfterCStyleCast: true
+
+IncludeBlocks: Preserve
+
+AllowShortBlocksOnASingleLine: Always
+AllowShortLoopsOnASingleLine: true
